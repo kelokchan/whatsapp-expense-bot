@@ -1,0 +1,13 @@
+node_modules/
+.wwebjs_auth/
+.wwebjs_cache/
+expenses.json
+*.log
+.DS_Store
+
+# TypeScript build output
+dist/
+*.tsbuildinfo
+
+# Old JavaScript file
+bot.js

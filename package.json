@@ -1,0 +1,32 @@
+{
+  "name": "whatsapp-expense-bot",
+  "version": "1.0.0",
+  "description": "WhatsApp bot for tracking expenses easily",
+  "main": "dist/bot.js",
+  "scripts": {
+    "build": "tsc",
+    "start": "node dist/bot.js",
+    "postinstall": "npm run build",
+    "dev": "ts-node-dev --respawn --transpile-only src/bot.ts",
+    "watch": "tsc --watch"
+  },
+  "engines": {
+    "node": ">=18.0.0",
+    "npm": ">=9.0.0"
+  },
+  "keywords": ["whatsapp", "bot", "expense", "tracker", "typescript"],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "whatsapp-web.js": "^1.25.0",
+    "qrcode-terminal": "^0.12.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "@types/qrcode-terminal": "^0.12.0",
+    "nodemon": "^3.0.1",
+    "ts-node": "^10.9.1",
+    "ts-node-dev": "^2.0.0",
+    "typescript": "^5.3.0"
+  }
+}
