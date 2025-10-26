@@ -1,11 +1,10 @@
 services:
-  - type: web
+  - type: pserv
     name: whatsapp-expense-bot
     env: docker
     dockerfilePath: ./Dockerfile
     plan: free
     autoDeploy: true
-    healthCheckPath: /
     envVars:
       - key: NODE_ENV
         value: production
