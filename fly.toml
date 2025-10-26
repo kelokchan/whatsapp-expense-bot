@@ -1,24 +1,22 @@
-# Fly.io configuration for WhatsApp Expense Bot
-app = "whatsapp-expense-bot"
-primary_region = "sin" # Singapore - change to your preferred region
+# fly.toml app configuration file generated for whatsapp-expense-bot on 2025-10-26T14:39:37Z
+#
+# See https://fly.io/docs/reference/configuration/ for information about how to use this file.
+#
+
+app = 'whatsapp-expense-bot'
+primary_region = 'sin'
 
 [build]
-  [build.args]
-    NODE_VERSION = "20"
-
-[env]
-  NODE_ENV = "production"
-  PUPPETEER_SKIP_CHROMIUM_DOWNLOAD = "true"
-  PUPPETEER_EXECUTABLE_PATH = "/usr/bin/chromium"
 
 [http_service]
   internal_port = 8080
-  force_https = false
-  auto_stop_machines = false
-  auto_start_machines = false
-  min_machines_running = 1
+  force_https = true
+  auto_stop_machines = 'stop'
+  auto_start_machines = true
+  min_machines_running = 0
+  processes = ['app']
 
 [[vm]]
-  cpu_kind = "shared"
+  cpu_kind = 'shared'
   cpus = 1
   memory_mb = 512
